@@ -9,6 +9,16 @@
     <%= form.text_field :name, required: true, autofocus: true, autocomplete: "#{address_type} given-name" %>
   </div>
 
+  <div class="text-input">
+    <%= form.label :firstname, "#{I18n.t("spree.firstname")}:" %>
+    <%= form.text_field :firstname, required: true, autofocus: true, autocomplete: "#{address_type} given-name" %>
+  </div>
+
+  <div class="text-input">
+    <%= form.label :lastname, "#{I18n.t("spree.lastname")}:" %>
+    <%= form.text_field :lastname, required: true, autofocus: true, autocomplete: "#{address_type} given-name" %>
+  </div>
+
   <% if Spree::Config[:company] %>
     <div class="text-input">
       <%= form.label :company, "#{I18n.t("spree.company")}:" %>
