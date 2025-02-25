@@ -111,4 +111,14 @@
       <%= form.telephone_field :alternative_phone, autocomplete: "#{address_type} tel" %>
     </div>
   <% end %>
+
+  <div class="text-input">
+    <%= form.label :email, "#{I18n.t("spree.email")}:" %>
+    <%= form.email_field :email, autocomplete: "#{address_type} email"%>
+  </div>
+
+  <div class="text-input">
+    <%= form.label :vat_id, "#{I18n.t("spree.vat_id")}:" %>
+    <%= form.text_field :vat_id, autocomplete: "#{address_type} email" %>
+  </div>
 </div>
